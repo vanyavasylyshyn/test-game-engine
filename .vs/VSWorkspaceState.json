@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\graphics",
+    "\\src\\shaders",
+    "\\src\\utils"
+  ],
+  "SelectedNode": "\\src\\graphics\\shader.cpp",
+  "PreviewInSolutionExplorer": false
+}

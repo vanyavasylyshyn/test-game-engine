@@ -1,7 +1,9 @@
 #pragma once
 
+#include <iostream>
 #include <GL/glew.h>
 #include "../utils/fileutils.h"
+#include <vector>
 
 namespace test { namespace graphics {
 
@@ -9,7 +11,8 @@ namespace test { namespace graphics {
 	{
 	private:
 		GLuint m_ShaderID;
-		const char* m_VertPath, m_FragPath;
+		const char* m_VertPath;
+		const char* m_FragPath;
 	public:
 		Shader(const char* vertPath, const char* fragPath);
 		~Shader();

@@ -2,9 +2,11 @@
 
 #include <string>
 
-namespace test {
 
-	std::string read_file(const char* filepath)
+class FileUtils {
+
+public:
+	static std::string read_file(const char* filepath)
 	{
 		FILE* file = fopen(filepath, "rt");
 		fseek(file, 0, SEEK_END);
@@ -19,5 +21,6 @@ namespace test {
 		delete[] data;
 		return result;
 	}
+
 
 }
