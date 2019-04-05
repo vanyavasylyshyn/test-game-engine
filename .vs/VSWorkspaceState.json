@@ -6,6 +6,6 @@
     "\\src\\shaders",
     "\\src\\utils"
   ],
-  "SelectedNode": "\\src\\graphics\\shader.cpp",
+  "SelectedNode": "\\src\\graphics\\shader.h",
   "PreviewInSolutionExplorer": false
 }

@@ -13,11 +13,28 @@ int main() {
 	Window window("Test!", 700, 500);
 	glClearColor(0.2f, 0.3f, 0.8f, 1.0f);
 
-	GLuint vao;
-	glGenVertexArrays(1, &vao);
-	glBindVertexArray(vao);
+	
+	
+
+	GLfloat vertices[] =
+	{
+		-0.5f, -0.5f, 0.0f,
+		-0.5f,  0.5f, 0.0f,
+		 0.5f,  0.5f, 0.0f,
+		 0.5f,  0.5f, 0.0f,
+		 0.5f, -0.5f, 0.0f,
+		-0.5f, -0.5f, 0.0f
+	}
+
+	GLuint vbo;
+	glGenBuffers(1, &vbo)
+	glBindBuffer(GL_ARRAY_BUFFER, vbo);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+	glVertexAttribPointer(0, 3, GL_FLOAT, 0, 0);
+	glEnableVertexAttribArray(0);
 
 	Shader shader("src/shaders/basic.vert", "src/shaders/basic.frag");
+	shader.enable();
 
 	while (!window.closed()) 
 	{
@@ -25,7 +42,7 @@ int main() {
 		
 
 		window.clear();
-		glDrawArrays(GL_ARRAY_BUFFER, 0, 6);
+		glDrawArrays(GL_TRIANGLES, 0, 6);
 		window.update();
 	}
 
