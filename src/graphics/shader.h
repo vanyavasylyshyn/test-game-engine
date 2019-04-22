@@ -18,8 +18,6 @@ namespace test { namespace graphics {
 		Shader(const char* vertPath, const char* fragPath);
 		~Shader();
 
-		
-
 		void setUniform1f(const GLchar* name, float value);
 		void setUniform1i(const GLchar* name, int value);
 		void setUniform2f(const GLchar* name, const maths::vec2& vector);
