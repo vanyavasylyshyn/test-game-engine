@@ -3,9 +3,10 @@
     "",
     "\\src",
     "\\src\\graphics",
+    "\\src\\graphics\\buffers",
     "\\src\\shaders",
     "\\src\\utils"
   ],
-  "SelectedNode": "\\src\\graphics\\shader.h",
+  "SelectedNode": "\\src\\graphics\\buffers\\buffer.cpp",
   "PreviewInSolutionExplorer": false
 }
